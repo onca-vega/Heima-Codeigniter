@@ -1,0 +1,31 @@
+{
+	"name": "heima-codeigniter-rest",
+	"description": "Skeleton for web services based on Codeigniter framework",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"type": "codeigniter-third-party",
+	"scripts": {
+		"init_app": [
+			"@migrations_reset",
+			"@migrations_1",
+			"@fixtures"
+		],
+		"migrations_reset": "php index.php api Migrations_Controller index 0",
+		"migrations_1": "php index.php api Migrations_Controller index 1",
+		"fixtures": "php index.php api Fixtures_Controller index"
+	},
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+		"slack": "https://codeigniterchat.slack.com",
+		"source": "https://github.com/bcit-ci/CodeIgniter"
+	},
+	"require": {
+		"php": ">=5.3.7",
+		"bshaffer/oauth2-server-php": "1.10"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*",
+		"phpunit/phpunit": "4.* || 5.*"
+	}
+}
