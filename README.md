@@ -1,4 +1,4 @@
-Heima for [Codeigniter] and REST
+Heima for [Codeigniter]
 ============
 
 [Codeigniter]: https://codeigniter.com/

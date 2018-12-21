@@ -4,8 +4,8 @@ abstract class Oauth2_Controller extends REST_Controller {
   private $_storage;
   protected $_server;
 
-  function __construct(){
-    parent::__construct();
+  function __construct($config = 'rest'){
+    parent::__construct($config);
     // $dsn is the Data Source Name for your database, for exmaple "mysql:dbname=my_oauth2_db;host=localhost"
     $this->_storage = new OAuth2\Storage\Pdo($this->_getPdo()); //, array( 'user_table' => 'usuario' ));
     // Pass a storage object or array of storage objects to the OAuth2 server class

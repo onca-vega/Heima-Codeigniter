@@ -504,7 +504,7 @@ $config['rest_language'] = 'spanish';
 | will access it through a browser
 |
 */
-$config['check_cors'] = FALSE;
+$config['check_cors'] = TRUE;
 /*
 |--------------------------------------------------------------------------
 | CORS Allowable Headers
@@ -519,6 +519,7 @@ $config['allowed_cors_headers'] = [
   'Content-Type',
   'Accept',
   'Access-Control-Request-Method',
+  'Authorization',
   'Xpg-Actual-Page',
   'Xpg-Per-Page',
   'Xpg-Total-Pages',
@@ -561,7 +562,7 @@ $config['allow_any_cors_domain'] = FALSE;
 | e.g. $config['allowed_origins'] = ['http://www.example.com', 'https://spa.example.com']
 |
 */
-$config['allowed_cors_origins'] = [];
+$config['allowed_cors_origins'] = ['http://localhost:4200'];
 /*
 |--------------------------------------------------------------------------
 | CORS Forced Headers
