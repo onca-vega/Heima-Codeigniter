@@ -35,8 +35,9 @@ libraries/REST_Controller.php
 16) Define users table and change logic to deliver token creation in Oauth2_Controller
 17) Create migrations and fixtures
 18) Run migrations and fixtures
-20) All your modular controllers can be extended by Oauth2_Controller (to deliver private data), or REST_Controller (to deliver public data)
-19) Set controllers access for verified consumers
+19) Add "$this->_mysqli->options(MYSQLI_OPT_INT_AND_FLOAT_NATIVE,TRUE);" in system/database/drivers/mysqli/mysqli_driver.php line 138, to deliver data with properly datatype
+20) Set controllers access for verified consumers
+21) All your modular controllers can be extended by Oauth2_Controller (to deliver private data), or REST_Controller (to deliver public data)
 [Codeigniter]: https://codeigniter.com/
 [CodeIgniter Rest Server]: https://github.com/chriskacerguis/codeigniter-restserver
 [HMVC modular extensions]: https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc/src/codeigniter-3.x/
