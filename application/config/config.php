@@ -23,8 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['crypt_salt'] = "asbioybasiy%_Heima-Codeigniter_%dvas=!%%#23423";
-
 if(array_key_exists('HTTP_HOST', $_SERVER)){
   $Routing = 'rest_appstructure';
   $config['Routing'] = $Routing;

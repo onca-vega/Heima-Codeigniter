@@ -38,7 +38,7 @@ class Fixtures_Controller extends MX_Controller {
     $data = [
       [
         'username' => 'onca-vega',
-        'password' => crypt('123asd', $this->config->item('crypt_salt')),
+        'password' => password_hash('123asd', PASSWORD_DEFAULT),
         'first_name' => 'Marcos',
         'last_name' => 'Chávez',
         'email' => 'm-j.chavez.v@hotmail.com',

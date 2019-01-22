@@ -52,7 +52,7 @@ class CustomUserStorage extends MX_Controller implements OAuth2\Storage\UserCred
 
     public function checkUserCredentials($username, $password) {
       $result = $this->db->get_where('oauth_users', array( 'username' => $username ));
-      $valid = $result->num_rows() === 1 && hash_equals($result->result()[0]->password, crypt($password, $result->result()[0]->password));
+      $valid = $result->num_rows() === 1 && password_verify($password, $result->result()[0]->password);
       return $valid ? array('user_id' => $result->result()[0]->id) : false;
     }
 
